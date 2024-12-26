@@ -1,8 +1,12 @@
 import streamlit as st
 import google.generativeai as genai
+from PIL import Image
 
 genai.configure(api_key= st.secrets["gemini_api_key"])
 model = genai.GenerativeModel("gemini-1.5-flash")
+
+img = Image.open("DREAMSCRIBE.png")
+
 
 def generate_story(concept, target_audience):
     """Generate a learning story based on the provided concept and audience."""
@@ -20,7 +24,13 @@ def generate_story(concept, target_audience):
     return result.text
 
 # Streamlit UI
-st.title("Learning Story Generator")
+st.title("DREAMSCRIBE 💭📝")
+
+st.image(
+    img,
+    caption="Generate Learning from Stories for Students",
+    width=300
+)
 
 concept = st.text_input("Enter the Concept", placeholder="e.g., Photosynthesis, Quick Sort")
 target_audience = st.text_input("Enter the Target Audience", placeholder="e.g., High School, Engineering Students")
@@ -39,3 +49,6 @@ if st.button("Generate Story"):
     else:
         st.error("Please provide both the concept and target audience.")
 
+
+
+st.caption("Kunal Khairnar | SINIXCODE © 2024")
