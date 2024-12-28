@@ -77,6 +77,6 @@ if st.button("Generate Story"):
             except Exception as e:
                 st.error(f"An error occurred: {e}")
     else:
-        st.error("Please provide both the concept and target audience."
+        st.error("Please provide both the concept and target audience.")
 
 st.caption("Kunal Khairnar | SINIXCODE © 2024")
