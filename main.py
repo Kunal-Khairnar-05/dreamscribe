@@ -72,10 +72,10 @@ if st.button("Generate Story"):
                                 st.balloons()
                             except Exception as e:
                                 st.error(f"An error occurred: {e}")
-    else:
-        st.error("Please provide the question.")
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
+                    else:
+                        st.error("Please provide the question.")
+                            except Exception as e:
+                                st.error(f"An error occurred: {e}")
     else:
         st.error("Please provide both the concept and target audience."
 
