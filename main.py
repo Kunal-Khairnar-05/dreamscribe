@@ -65,7 +65,7 @@ if st.button("Generate Story"):
                                 )
                                 result = chat_session.send_message(f"Question: {question1}")
                                 answer = result.text
-                                st.write()
+                                st.write(story)
                                 st.success("Answer generated successfully!")
                                 st.subheader("Generated Answer:")
                                 st.write(answer)
