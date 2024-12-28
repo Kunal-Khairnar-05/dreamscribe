@@ -74,8 +74,8 @@ if st.button("Generate Story"):
                                 st.error(f"An error occurred: {e}")
                     else:
                         st.error("Please provide the question.")
-                            except Exception as e:
-                                st.error(f"An error occurred: {e}")
+                        except Exception as e:
+                            st.error(f"An error occurred: {e}")
     else:
         st.error("Please provide both the concept and target audience."
 
